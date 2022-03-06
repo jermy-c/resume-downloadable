@@ -1,0 +1,18 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.page {
+    width: 8.4in;
+    margin: 1in auto;
+    box-shadow: 0 0 10px 10px lightgray;
+}
+
+#page {
+    margin: 0 -0.1in;
+}
+
+.hide {
+    display: none;
+}
