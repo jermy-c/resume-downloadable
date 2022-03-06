@@ -8,7 +8,8 @@ titles_from_headings:
   strip_title: false
   collections: false
 
-repository: jermy-c/resume
+base-url: https://jermy-c.github.io
+url: /resume-downloadable
   
 remote_theme: pages-themes/cayman@v0.2.0
 plugins:
