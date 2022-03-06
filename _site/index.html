@@ -110,5 +110,47 @@ Design, Hardware Fundamentals</p>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="http://localhost:4000/assets/js/script.js"></script>
+    <script>
+        function download() {
+        var container = document.getElementById('print-area');
+        
+        var element = document.getElementById('page');
+        var button = document.getElementsByClassName('btn');
+
+        function addClass() {
+            container.classList.add('page');
+            button.forEach(element => {
+                element.classList.add('hide')
+            });
+        }
+
+
+        var opt = {
+        margin:       0,
+        filename:     'resume.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 4, y: 0, scrollY: 0, removeContainer: false, dpi: 300},
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' },
+        //pagebreak: { mode: 'avoid-all' }
+        };
+        
+        // New Promise-based usage:
+        function print() {
+            html2pdf().set(opt).from(element).save();
+        }
+
+
+        function removeClass() {
+            container.classList.remove('page');
+            button.forEach(element => {
+                element.classList.remove('hide')
+            });
+        }
+
+        addClass();
+        setTimeout(print, 2000);
+        setTimeout(removeClass, 5000);
+    }
+    </script>
   </body>
 </html>
