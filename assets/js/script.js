@@ -1,6 +1,5 @@
 function download() {
     var container = document.getElementById('print-area');
-    
     var element = document.getElementById('page');
     var button = document.getElementsByClassName('btn');
 
@@ -9,6 +8,7 @@ function download() {
         button.forEach(element => {
             element.classList.add('hide')
         });
+        element.classList.add('over-page');
     }
 
 
@@ -32,6 +32,7 @@ function download() {
         button.forEach(element => {
             element.classList.remove('hide')
         });
+        element.classList.add('over-page');
     }
 
     addClass();

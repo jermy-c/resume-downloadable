@@ -4,12 +4,12 @@
 @import "{{ site.theme }}";
 
 .page {
-    width: 8.4in;
+    width: 8.5in;
     margin: 1in auto;
     box-shadow: 0 0 10px 10px lightgray;
 }
 
-#page {
+.over-page {
     margin: 0 -0.1in;
 }
 
