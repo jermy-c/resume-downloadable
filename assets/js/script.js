@@ -32,7 +32,7 @@ function download() {
         button.forEach(element => {
             element.classList.remove('hide')
         });
-        element.classList.add('over-page');
+        element.classList.remove('over-page');
     }
 
     addClass();
